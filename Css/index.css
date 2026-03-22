@@ -1,0 +1,326 @@
+@font-face {
+  font-family: "Harmattan";
+  src: url("../Fonts/Harmattan-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("../Images/baggrund.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Harmattan", serif;
+}
+
+.site-name {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.site-name h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+.site-name img {
+  width: 100px;
+  justify-self: start;
+}
+
+.menu {
+  background-color: #f9f9f6;
+  padding: 6px;
+  font-family: "Harmattan", serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  letter-spacing: 2px;
+}
+
+.menu a,
+.fokus_drop {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropmenu {
+  position: relative;
+}
+
+.fokus_drop {
+  cursor: pointer;
+}
+
+.fokuslinks_dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.fokuslinks_dropdown a {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.fokuslinks_dropdown a:hover {
+  background-color: #ddd;
+}
+
+.dropmenu:hover .fokuslinks_dropdown {
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.8;
+}
+
+.Hero {
+  text-align: center;
+  max-width: 900px;
+  margin: 60px auto 40px;
+  padding: 40px 20px;
+}
+
+.Hero h2 {
+  margin: 0 0 18px;
+  font-size: 64px;
+  font-weight: 400;
+  letter-spacing: 6px;
+  line-height: 1.1;
+  white-space: nowrap;
+}
+
+.Hero p {
+  margin: 0 auto;
+  max-width: 760px;
+  font-size: 24px;
+  line-height: 1.7;
+  letter-spacing: 1.5px;
+}
+
+.Intro h3 {
+  margin-top: 5%;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-bottom: -2%;
+  font-weight: bold;
+}
+
+.Intro p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.forside_outro h3 {
+  margin-top: 7%;
+  font-size: 25px;
+  letter-spacing: 1px;
+  margin-bottom: 1%;
+}
+
+.Buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin: 40px 0 60px;
+}
+
+.Buttons a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.Buttons span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 6px 14px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.Buttons img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 28px;
+  opacity: 0.65;
+  display: block;
+  transition: 0.3s ease;
+}
+
+.Buttons a:hover img {
+  opacity: 0.85;
+  transform: scale(1.03);
+}
+
+.Buttons a:hover span {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.forside_outro p {
+  font-size: 20px;
+  margin: 0%;
+  letter-spacing: 0.5px;
+}
+
+.outrobutton {
+  text-align: center;
+  margin-top: 35px;
+  display: inline-block;
+  padding: 12px 32px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  color: black;
+  border: 2px solid black;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.outrobutton a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+}
+
+.outrobutton:hover {
+  background-color: rgb(249, 248, 248);
+  color: rgb(0, 0, 0);
+  transform: translateY(-2px);
+}
+
+footer {
+  font-family: "Harmattan", serif;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    gap: 60px;
+  }
+
+  .site-name h1 {
+    font-size: 56px;
+  }
+
+  .Hero h2 {
+    font-size: 48px;
+  }
+
+  .Buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    gap: 25px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-name h1 {
+    font-size: 42px;
+  }
+
+  .site-name img {
+    width: 80px;
+  }
+
+  .Hero h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    white-space: normal;
+  }
+
+  .Hero p {
+    font-size: 18px;
+  }
+
+  .Intro h3,
+  .forside_outro h3 {
+    font-size: 22px;
+  }
+
+  .Intro p,
+  .forside_outro p {
+    font-size: 18px;
+  }
+
+  .Buttons {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .Buttons img {
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 15px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-name h1 {
+    font-size: 34px;
+  }
+
+  .site-name img {
+    width: 65px;
+  }
+
+  .Hero h2 {
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
+
+  .Hero p,
+  .Intro p,
+  .forside_outro p {
+    font-size: 16px;
+  }
+
+  .Intro h3,
+  .forside_outro h3 {
+    font-size: 20px;
+  }
+
+  .Buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .Buttons img {
+    height: 180px;
+  }
+}

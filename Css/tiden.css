@@ -1,0 +1,283 @@
+@font-face {
+  font-family: "Harmattan";
+  src: url("../Fonts/Harmattan-Regular.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.55)), url("../Images/baggrund.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Harmattan", serif;
+}
+
+.site-name {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.site-name h1 {
+  margin: 0;
+  text-align: center;
+  font-size: 70px;
+  letter-spacing: 5px;
+}
+
+.site-name img {
+  width: 100px;
+  justify-self: start;
+}
+
+.menu {
+  background-color: #f9f9f6;
+  padding: 6px;
+  font-family: "Harmattan", serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 160px;
+  letter-spacing: 2px;
+}
+
+.menu a,
+.fokus_drop {
+  text-decoration: none;
+  color: black;
+  display: block;
+}
+
+.dropmenu {
+  position: relative;
+}
+
+.fokus_drop {
+  cursor: pointer;
+}
+
+.fokuslinks_dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f1f1f1;
+  min-width: 180px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.fokuslinks_dropdown a {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.fokuslinks_dropdown a:hover {
+  background-color: #ddd;
+}
+
+.dropmenu:hover .fokuslinks_dropdown {
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 20px;
+  line-height: 1.5;
+}
+
+.tiden_billede {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.tiden_billede img {
+  position: relative;
+  width: 100vw;
+  height: 300px;
+  margin-left: calc(50% - 50vw);
+  background: rgba(255, 255, 255, 0.75);
+  opacity: 0.2;
+  object-fit: cover;
+}
+
+.tiden_billede .tiden_hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 2;
+}
+
+.tiden_hero h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 40px;
+  letter-spacing: 1px;
+}
+
+.tiden_hero h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 1px;
+}
+
+.tiden_trin h3 {
+  text-align: center;
+  font-size: 26px;
+  letter-spacing: 1px;
+  background-color: #f2f2f1;
+  border-radius: 40px;
+  padding: 15px;
+  margin: 50px auto;
+  max-width: 900px;
+  margin-bottom: -0.5%;
+  margin-top: 10%;
+}
+
+.Intro p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.Intro_tekst1 {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+.tiden_trin p {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+main ul {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 1024px) {
+  .menu {
+    gap: 60px;
+  }
+
+  .site-name h1 {
+    font-size: 56px;
+  }
+
+  .tiden_hero h2 {
+    font-size: 34px;
+  }
+
+  .tiden_hero h3 {
+    font-size: 22px;
+  }
+
+  .tiden_trin h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    gap: 25px;
+    font-size: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-name h1 {
+    font-size: 42px;
+  }
+
+  .site-name img {
+    width: 80px;
+  }
+
+  main {
+    padding: 0 16px;
+  }
+
+  .tiden_billede img {
+    height: 240px;
+  }
+
+  .tiden_hero h2 {
+    font-size: 30px;
+    letter-spacing: 1px;
+  }
+
+  .tiden_hero h3 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 0 12px;
+  }
+
+  .Intro p,
+  .Intro_tekst1,
+  .tiden_trin p,
+  main ul {
+    font-size: 18px;
+    letter-spacing: 0.5px;
+  }
+
+  .tiden_trin h3 {
+    font-size: 22px;
+    padding: 12px;
+    margin: 35px auto 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu {
+    gap: 15px;
+    font-size: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-name h1 {
+    font-size: 34px;
+  }
+
+  .site-name img {
+    width: 65px;
+  }
+
+  main {
+    padding: 0 14px;
+  }
+
+  .tiden_billede img {
+    height: 200px;
+  }
+
+  .tiden_hero h2 {
+    font-size: 24px;
+  }
+
+  .tiden_hero h3 {
+    font-size: 17px;
+    padding: 0 10px;
+  }
+
+  .Intro p,
+  .Intro_tekst1,
+  .tiden_trin p,
+  main ul {
+    font-size: 16px;
+  }
+
+  .tiden_trin h3 {
+    font-size: 20px;
+    border-radius: 28px;
+    padding: 10px;
+  }
+}
